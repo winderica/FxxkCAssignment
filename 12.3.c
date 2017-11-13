@@ -14,4 +14,5 @@ int main() {
         f(a, 0);
         printf("\n");
     }
+    return 0;
 }
