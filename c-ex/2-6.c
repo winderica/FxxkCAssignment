@@ -1,12 +1,14 @@
 #include <stdio.h>
 int main()
 {
-    int i;
+    long i;
     printf("input a number:");
-    scanf("%d", &i);
+    scanf("%ld", &i);
     while (i > 0) {
-        printf("%d", i % 10);
-        i /= 10;
+	if (i % 10 != 0) {
+            printf("%ld", i % 10);
+        }
+	i /= 10;
     }
     printf("\n");
     return 0;
