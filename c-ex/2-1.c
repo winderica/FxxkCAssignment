@@ -6,6 +6,6 @@ int main()  //void->int
     scanf("%d",&n); //n->&n取地址
     for(i=1;i<=n;i++) // 逗号->分号
         s=s*i;
-    printf("%d! = %d",n,s);
+    printf("%d! = %d\n",n,s);
 }
 

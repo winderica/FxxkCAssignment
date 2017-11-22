@@ -9,6 +9,6 @@ int main()  //void->int
         s=s*i;
         i++;
     }
-    printf("%d! = %d",n,s);
+    printf("%d! = %d\n",n,s);
 }
 

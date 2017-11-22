@@ -9,7 +9,7 @@ int main()  //void->int
         s = s * i;
         i++;
     }
-    printf("n=%d",i - 1);
+    printf("n=%d\n",i - 1);
     return 0;
 }
 
