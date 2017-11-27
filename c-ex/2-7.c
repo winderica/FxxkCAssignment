@@ -23,5 +23,7 @@ int main() {
     while (!isSolution(x)) {
         x = x - f(x)/g(x);
     }
-    printf("%lf", x);
+    printf("%lf\n", x);
+    return 0;
 }
+
