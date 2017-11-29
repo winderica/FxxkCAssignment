@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include <stdio.h>
 long sum_fac(int n);
 int main(void)
 {
@@ -8,13 +8,10 @@ int main(void)
 }
 long sum_fac(int n)
 {
-    long s=0;
-    int i;
-    long fac = 1;
-    for (i = 1; i <= n; i++) {
-        fac*=i;
-        s+=fac;
-    }
+    static long s=0;
+    static long fac = 1;
+    fac*=n;
+    s+=fac;
     return s;
 }
 

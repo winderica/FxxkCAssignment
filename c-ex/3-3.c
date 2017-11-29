@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include <stdio.h>
 
 double sum_fac(int n);
 int main(void)

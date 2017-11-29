@@ -1,0 +1,6 @@
+1.  p = 0x61ff20, i = 4194432(未初始化，本机
+2. printf("i=%d\tthe sum is %ld\n",i,*p);
+3. n = 1
+    k = -var-create: unable to create variable object
+    i = -var-create: unable to create variable object
+4. 3 -> 2 -> 3 -> 1 

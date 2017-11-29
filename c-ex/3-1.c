@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include <stdio.h> //最好使用<>,以包含标准头文件
 long sum_fac(int n); //先声明
 int main(void) //void->int
 {
@@ -9,12 +9,10 @@ int main(void) //void->int
 long sum_fac(int n)
 {
     long s=0;
-    int i, j;
-    for (j = 1; j <= n; j++) { //循环将s增加i！
-        long fac = 1; // 初始化为1，放在第一层循环内部
-        for(i=1;i<=j;i++){
-            fac*=i;
-        }
+    int i;
+    long fac = 1;//初始化为1
+    for(i=1;i<=n;i++){ //加上大括号
+        fac*=i;
         s+=fac;
     }
     return s;
