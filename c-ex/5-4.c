@@ -1,18 +1,18 @@
 #include <stdio.h>
 
-void strncat(char [],char [],int);
+void mystrncat(char [],char [],int);
 int main(void)
 {
     char a[50]="The adopted symbol is ",b[27]="abcdefghijklmnopqrstuvwxyz";
-    strncat(a, b, 4);
+    mystrncat(a, b, 4);
     printf("%s\n",a);
     return 0;
 }
-void strncat(char s[], char t[], int n)
+void mystrncat(char s[], char t[], int n)
 {
     int i = 0, j;
     while(s[i++]) ;
-    i -= 1;
+    i -= 1; //在while循环后s多自增了一次，应将i减去1
     for(j = 0; j < n && t[j];) {
         s[i++] = t[j++];
     }

@@ -1,4 +1,4 @@
-nclude<stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 #define Queens 8
