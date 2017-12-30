@@ -103,34 +103,27 @@ void print_total(struct s_list *headp) {
 }
 struct s_list * sort(struct s_list *headp) {
     struct s_list *t = headp;
-    struct s_list *a;
+    struct s_list *a = NULL;
     struct s_list *b;
-    struct s_list *c;
     while(headp) {
         struct s_list *p = t;
         while (p->next) {
             if (p->grade.english + p->grade.math + p->grade.physics + p->grade.c > p->next->grade.english + p->next->grade.math + p->next->grade.physics + p->next->grade.c) {
-                if (!p->prior) {
-                    a = p->next;
-                    b = p->next->next;
-                    p->next = b;
-                    b->prior = p;
-                    a->prior = NULL;
-                    a->next = p;
-                    p->prior = a;
-                    t = a;
+                if (!a || p == t) {
+                    b = p->next;
+                    p->next = p->next->next;
+                    b->next = p;
+                    t = b;
+                    a = b;
                 } else {
-                    c = p->prior;
-                    a = p->next;
-                    b = p->next->next;
-                    p->next = b;
-                    b->prior = p;
-                    a->prior = c;
-                    c->next = a;
-                    a->next = p;
-                    p->prior = a;
+                    b = p->next;
+                    a->next = b;
+                    p->next = p->next->next;
+                    b->next = p;
+                    a = b;
                 }
             } else {
+                a = p;
                 p = p->next;
             }
         }
